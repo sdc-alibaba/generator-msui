@@ -1,0 +1,23 @@
+# http://editorconfig.org/
+# 子目录可放子级editorconfig
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+# 看了团队大部分同学的代码，2/4缩进的都有。之前考虑2空格缩进,angular、jquery、react、yeoman、grunt、gulp、Bootstrap等也都是2空格。但考虑到[4 to 2]的过程比较痛苦，故采用4空格缩进。
+indent_size = 4
+end_of_line = lf
+# 避免一些无意义的diff
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{html,htm,vm,tpl}]
+indent_size = 4
+insert_final_newline = false
+
+[**.md]
+# 考虑markdown的特殊语法
+trim_trailing_whitespace = false
+insert_final_newline = false
+indent_size = 4

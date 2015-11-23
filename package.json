@@ -1,0 +1,27 @@
+{
+  "name": "generator-msui",
+  "version": "0.0.1",
+  "description": "msui 入口仓库的工程目录结构的自动化generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdc-alibaba/generator-msui.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "msui",
+    "sui-mobile"
+  ],
+  "author": "Mickey-",
+  "license": "Apache License",
+  "bugs": {
+    "url": "https://github.com/sdc-alibaba/generator-msui/issues"
+  },
+  "homepage": "https://github.com/sdc-alibaba/generator-msui",
+  "dependencies": {
+    "yeoman-generator": "~0.21.1"
+  }
+}
