@@ -28,6 +28,8 @@ module.exports = yeoman.generators.Base.extend({
 
     },
     writing: function() {
+        this.log('writing')
+return
         var compilePath = this.templatePath('compile'),
             files = fs.readdirSync(compilePath)
 
@@ -51,6 +53,16 @@ module.exports = yeoman.generators.Base.extend({
             this.templatePath('Gruntfile.js'),
             this.destinationPath('Gruntfile.js')
         )
+    },
+    addGitSubmodule: function() {
+        this.log(this)
+        this.spawnCommand('git', ['init']);
+        //this.spawnCommand('git', ['remote', 'add', 'origin', this.repo]);
+        //this.spawnCommand('git', ['submodule', 'add', 'git@gitlab.alibaba-inc.com:sj/ws.git', 'base']);
+        this.spawnCommand('git', ['submodule', 'add', 'git@gitlab.alibaba-inc.com:msui/msui-base.git', 'base']);
+        return
+        this.spawnCommand('git', ['commit', '-m', '"initial commit from generator"']);
+        this.spawnCommand('git', ['push', '-u', 'origin', 'master']);
     },
     install: function() {
         0&&this.npminstall();
