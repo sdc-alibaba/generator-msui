@@ -1,8 +1,8 @@
 {
-  "name": "generator-msui",
-  "version": "0.0.2",
+  "name": "@ali/generator-msui",
+  "version": "0.1.0",
   "description": "msui 入口仓库的工程目录结构的自动化generator",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
