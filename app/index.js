@@ -1,6 +1,6 @@
 'use strict';
 var yeoman = require('yeoman-generator'),
-    fs = require('fs');
+    fs = require('fs')
 
 module.exports = yeoman.generators.Base.extend({
     initializing: function() {
@@ -29,7 +29,7 @@ module.exports = yeoman.generators.Base.extend({
     },
     writing: function() {
         this.log('writing')
-return
+        //var done = this.async();
         var compilePath = this.templatePath('compile'),
             files = fs.readdirSync(compilePath)
 
@@ -41,6 +41,7 @@ return
                 this.data
             )
         }
+        //done()
 
         // 不需要模板编译的目录copy，且文件内没有 EJS 语法字符串
         this.directory(
@@ -54,18 +55,14 @@ return
             this.destinationPath('Gruntfile.js')
         )
     },
-    addGitSubmodule: function() {
-        this.log(this)
+    install: function() {
+        this.log('install')
         this.spawnCommand('git', ['init']);
         //this.spawnCommand('git', ['remote', 'add', 'origin', this.repo]);
         //this.spawnCommand('git', ['submodule', 'add', 'git@gitlab.alibaba-inc.com:sj/ws.git', 'base']);
         this.spawnCommand('git', ['submodule', 'add', 'git@gitlab.alibaba-inc.com:msui/msui-base.git', 'base']);
-        return
-        this.spawnCommand('git', ['commit', '-m', '"initial commit from generator"']);
-        this.spawnCommand('git', ['push', '-u', 'origin', 'master']);
-    },
-    install: function() {
-        0&&this.npminstall();
+
+        this.spawnCommand('tnpm', ['install']);
     }
 
 });
