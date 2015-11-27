@@ -1,5 +1,5 @@
 {
-  "name": "@ali/generator-msui",
+  "name": "generator-msui",
   "version": "0.1.1",
   "description": "msui 入口仓库的工程目录结构的自动化generator",
   "main": "app/index.js",
@@ -23,8 +23,5 @@
   "homepage": "https://github.com/sdc-alibaba/generator-msui",
   "dependencies": {
     "yeoman-generator": "~0.21.1"
-  },
-  "publishConfig": {
-      "registry": "http://registry.npm.alibaba-inc.com"
   }
 }
