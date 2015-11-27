@@ -23,5 +23,8 @@
   "homepage": "https://github.com/sdc-alibaba/generator-msui",
   "dependencies": {
     "yeoman-generator": "~0.21.1"
+  },
+  "publishConfig": {
+      "registry": "http://registry.npm.alibaba-inc.com"
   }
 }

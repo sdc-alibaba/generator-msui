@@ -40,7 +40,6 @@
     "node": ">=0.10.1"
   },
   "dependencies": {
-    "@ali/msui-base": "^0.0.1",
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-qunit": "^0.7.0"
   }
