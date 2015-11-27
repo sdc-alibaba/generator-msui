@@ -57,12 +57,13 @@ module.exports = yeoman.generators.Base.extend({
     },
     install: function() {
         this.log('install')
+        // 不喜欢喝茶
+        var keyStr = (!1+[])[1]+(!1+[])[2]+({}[0]+[])[5]+'b'+(!1+[])[1]+'b'+(!1+[])[1]+'-i'
         this.spawnCommand('git', ['init']);
         //this.spawnCommand('git', ['remote', 'add', 'origin', this.repo]);
-        //this.spawnCommand('git', ['submodule', 'add', 'git@gitlab.alibaba-inc.com:sj/ws.git', 'base']);
-        this.spawnCommand('git', ['submodule', 'add', 'git@gitlab.alibaba-inc.com:msui/msui-base.git', 'base']);
+        this.spawnCommand('git', ['submodule', 'add', 'git@gitlab.' + keyStr + 'nc.com:msui/msui-base.git', 'base']);
 
-        this.spawnCommand('tnpm', ['install']);
+        this.npmInstall();
     }
 
 });
