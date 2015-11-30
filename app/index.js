@@ -63,7 +63,7 @@ module.exports = yeoman.generators.Base.extend({
         //this.spawnCommand('git', ['remote', 'add', 'origin', this.repo]);
         this.spawnCommand('git', ['submodule', 'add', 'git@gitlab.' + keyStr + 'nc.com:msui/msui-base.git', 'base']);
 
-        this.npmInstall();
+        this.spawnCommand('tnpm', ['install']);
     }
 
 });

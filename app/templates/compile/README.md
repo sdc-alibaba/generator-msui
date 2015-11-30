@@ -2,17 +2,20 @@
 
 MSUI在 __<%= product %>__ 的业务扩展版
 
-## 轻量的UI库
+## 业务层垂直MSUI开发环境
 
-SUI Mobile 是阿里巴巴国际UED团队基于 [Framework7](http://framework7.taobao.org/) 开发的手机H5 UI库。
+首先在 Gitlab 的msui组下新建对应msui空仓库，clone到本地，然后切换到仓库根目录，执行
+```
+    tnpm install -g generator-msui
+
+    yo msui
+```
+
+## 轻量的UI库
 
 它的特点是非常轻量，并且能很好兼容 iOS 6.0+ 和 Android 4.0+  的设备。
 
 更多信息请前往 [官网](http://m.sui.taobao.org/)
-
-## 问题反馈
-
-可以在旺旺群 1278550944 交流
 
 ### Issue
 
