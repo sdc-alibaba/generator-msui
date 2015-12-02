@@ -33,8 +33,8 @@ module.exports = yeoman.generators.Base.extend({
             files = fs.readdirSync(compilePath)
 
         // 修正npm， https://github.com/npm/npm/issues/1862
-        this.copy(this.templatePath('without_compile/.npmignore'), this.templatePath('without_compile/.gitignore'))
-        this.fs.delete(this.templatePath('without_compile/.npmignore'))
+        var niPath = this.templatePath('.npmignore')
+        this.copy((this.fs.exists(niPath) ? niPath : this.templatePath('.gitignore')), this.destinationPath('.gitignore'))
 
         // 处理所有需要进行 EJS 模板编译的文件
         for(var i = 0; i < files.length; i++) {
