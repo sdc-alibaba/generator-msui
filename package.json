@@ -1,6 +1,6 @@
 {
   "name": "generator-msui",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "msui 入口仓库的工程目录结构的自动化generator",
   "main": "app/index.js",
   "scripts": {

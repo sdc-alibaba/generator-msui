@@ -28,10 +28,13 @@ module.exports = yeoman.generators.Base.extend({
 
     },
     writing: function() {
-        this.log('writing')
-        //var done = this.async();
+        this.log('writing...')
         var compilePath = this.templatePath('compile'),
             files = fs.readdirSync(compilePath)
+
+        // 修正npm， https://github.com/npm/npm/issues/1862
+        this.copy(this.templatePath('without_compile/.npmignore'), this.templatePath('without_compile/.gitignore'))
+        this.fs.delete(this.templatePath('without_compile/.npmignore'))
 
         // 处理所有需要进行 EJS 模板编译的文件
         for(var i = 0; i < files.length; i++) {
@@ -41,7 +44,6 @@ module.exports = yeoman.generators.Base.extend({
                 this.data
             )
         }
-        //done()
 
         // 不需要模板编译的目录copy，且文件内没有 EJS 语法字符串
         this.directory(
